@@ -1,0 +1,30 @@
+{
+  "name": "artha",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "build:web": "vite build --config apps/web/vite.config.ts",
+    "dev:api": "bun --watch apps/api/src/server.ts",
+    "dev:web": "vite --host 127.0.0.1 --port 5174 --config apps/web/vite.config.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
+  }
+}
